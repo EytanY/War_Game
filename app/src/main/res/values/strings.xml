@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">War Game</string>
+    <string name="image_front">image_front</string>
+    <string name="start_game">התחל משחק</string>
+    <string name="player_one">player_one</string>
+    <string name="black_player">black_player</string>
+    <string name="_0">0</string>
+    <string name="war">מלחמה</string>
+    <string name="play">שחק</string>
+    <string name="poker_open">poker_open</string>
+    <string name="open_card_white_player">open_card_white_player</string>
+    <string name="open_card_1">open card 1</string>
+    <string name="open_card_2">open card 2</string>
+    <string name="top_10">טופ 10</string>
+    <string name="winner">Winner</string>
+    <string name="winner_img">winner_img</string>
+    <string name="back_menu">חזור לתפריט</string>
+</resources>

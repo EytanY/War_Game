@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WinnerActivity"
+    android:background="@drawable/poker_background_game"
+    android:gravity="center">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/winner"
+                android:textSize="60sp"
+                />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/winner_name_lbl"
+                android:textSize="50sp"/>
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/winner_img"
+                android:contentDescription="@string/winner_img" />
+            <Button
+                android:id="@+id/back_menu_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="100dp"
+                android:backgroundTint="#2B512D"
+                android:text="@string/back_menu"
+                android:textSize="25sp" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

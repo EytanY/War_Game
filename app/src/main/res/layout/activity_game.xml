@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameActivity"
+    android:background="@drawable/poker_background_game"
+    android:overScrollMode="ifContentScrolls"
+    android:gravity="center_horizontal"
+    >
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="ScrollViewCount,UselessParent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="50sp"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/white_player_score_lbl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="60dp"
+                        android:text="@string/_0"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="40sp" />
+
+                    <ImageView
+                        android:id="@+id/white_player_img"
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
+                        android:contentDescription="@string/player_one"
+                        android:src="@drawable/poker_white_player" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/white_player_card"
+                        android:layout_width="150dp"
+                        android:layout_height="120dp"
+                        android:layout_marginEnd="70dp"
+                        android:contentDescription="@string/open_card_2"
+                        android:src="@drawable/poker_card_2_open" />
+
+                    <ImageView
+                        android:id="@+id/black_player_card"
+                        android:layout_width="150dp"
+                        android:layout_height="120dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/open_card_1"
+                        android:src="@drawable/poker_card_1_open" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:id="@+id/black_player_score_lbl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="@string/_0"
+                        android:textSize="40sp" />
+
+                    <ImageView
+
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
+                        android:contentDescription="@string/black_player"
+                        android:src="@drawable/poker_black_player" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/play_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="100dp"
+                android:backgroundTint="#2B512D"
+                android:text="@string/play"
+                android:textSize="25sp" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

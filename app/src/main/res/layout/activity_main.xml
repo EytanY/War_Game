@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/poker_background_game"
+
+    >
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/war"
+                android:textSize="100sp"
+                android:layout_marginTop="100dp"
+                android:layout_marginVertical="50sp"
+                android:textStyle="bold"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_marginVertical="50sp"
+                android:src="@drawable/main_poker_logo"
+                android:contentDescription="@string/poker_open"
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20sp"
+                android:backgroundTint="#2B512D"
+                android:text="@string/start_game"
+                android:textSize="30sp"
+                android:id="@+id/start_game_btn" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="100dp"
+                android:backgroundTint="#2B512D"
+                android:text="@string/top_10"
+                android:textSize="30sp"
+                android:id="@+id/top_ten_btn" />
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
