@@ -7,14 +7,12 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-
 import java.util.ArrayList;
 import java.util.Objects;
-import java.util.Timer;
 
 public class GameActivity extends AppCompatActivity {
     public Button play_btn;
@@ -24,15 +22,19 @@ public class GameActivity extends AppCompatActivity {
     public ImageView black_player_card;
     public ArrayList<Card> whitePlayerCards;
     public ArrayList<Card> blackPlayerCards;
+    private int turn = 0;
     public int black_player_score = 0;
     public int white_player_score = 0;
     private final Handler handler = new Handler();
     private boolean isForeground;
+    private MediaPlayer game_flip_sound;
     private boolean isPlayButtonClicked = false;
     private final String BLACK_SCORE_KEY = "BLACK_SCORE_KEY";
     private final String WHITE_SCORE_KEY = "WHITE_SCORE_KEY";
     private final String WHITE_PLAYER_CARDS_KEY = "WHITE_PLAYER_CARDS_KEY";
     private final String BLACK_PLAYER_CARDS_KEY = "BLACK_PLAYER_CARDS_KEY";
+    private final String TURN_KEY = "TURN_KEY";
+    private final String is_Play_Button_Clicked_KEY= "is_Play_Button_Clicked_KEY";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -76,11 +78,19 @@ public class GameActivity extends AppCompatActivity {
 
 
     private void setViews(Bundle savedInstanceState) {
+
         if(savedInstanceState != null){
             black_player_score = savedInstanceState.getInt(BLACK_SCORE_KEY);
             white_player_score = savedInstanceState.getInt(WHITE_SCORE_KEY);
             whitePlayerCards = (ArrayList<Card>) savedInstanceState.getSerializable(WHITE_PLAYER_CARDS_KEY);
             blackPlayerCards = (ArrayList<Card>) savedInstanceState.getSerializable(BLACK_PLAYER_CARDS_KEY);
+            turn = savedInstanceState.getInt(TURN_KEY);
+            isPlayButtonClicked = savedInstanceState.getBoolean(is_Play_Button_Clicked_KEY);
+            for(int i=0; i< turn; i++){
+                View view = findViewById(getResources().getIdentifier("game_VW_" + i, "id", getPackageName()));
+                view.setVisibility(View.VISIBLE);
+            }
+
         }
         else{
             whitePlayerCards = GameManager.getCards();
@@ -95,10 +105,9 @@ public class GameActivity extends AppCompatActivity {
         white_player_score_lbl = findViewById(R.id.white_player_score_lbl);
         white_player_card = findViewById(R.id.white_player_card);
         black_player_card = findViewById(R.id.black_player_card);
-
-
         black_player_score_lbl.setText("" + black_player_score);
         white_player_score_lbl.setText( "" + white_player_score);
+        game_flip_sound =  MediaPlayer.create(this, R.raw.poker_flip_sound);
     }
 
     @Override
@@ -108,10 +117,12 @@ public class GameActivity extends AppCompatActivity {
         outState.putInt(WHITE_SCORE_KEY, white_player_score);
         outState.putSerializable(WHITE_PLAYER_CARDS_KEY, whitePlayerCards);
         outState.putSerializable(BLACK_PLAYER_CARDS_KEY, blackPlayerCards);
+        outState.putInt(TURN_KEY, turn);
+        outState.putBoolean(is_Play_Button_Clicked_KEY, isPlayButtonClicked);
     }
     public void playGame(){
         isForeground = true;
-        int delay = 1200;
+        int delay = 1000;
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -144,33 +155,40 @@ public class GameActivity extends AppCompatActivity {
             black_player_score_lbl.setText(black_player_score + "");
             black_player_card.setImageDrawable(getResources().getDrawable(getResources().getIdentifier(black_card.getSrc(), null, getPackageName())));
             white_player_card.setImageDrawable(getResources().getDrawable(getResources().getIdentifier(white_card.getSrc(), null, getPackageName())));
+            View view = findViewById(getResources().getIdentifier("game_VW_" + turn, "id", getPackageName()));
+            if(view!= null)
+                view.setVisibility(View.VISIBLE);
+            turn++;
             playCardFlipSound();
         }
 
     }
 
     private void playCardFlipSound() {
-        final MediaPlayer game_flip_sound = MediaPlayer.create(this, R.raw.poker_flip_sound);
-        game_flip_sound.start();
+        runOnUiThread(() -> game_flip_sound.start());
     }
 
     public void startWinnerActivity(){
         String winner;
         int image_int;
+        int winnerScore;
         if(white_player_score > black_player_score){
             winner = "White Player";
             image_int = R.drawable.poker_white_player;
+            winnerScore = white_player_score;
         }
         else{
             winner = "Black Player";
             image_int = R.drawable.poker_black_player;
+            winnerScore = black_player_score;
         }
 
         Intent intent = new Intent(this, WinnerActivity.class);
         intent.putExtra(WinnerActivity.WINNER_NAME_KEY, winner);
         intent.putExtra(WinnerActivity.WINNER_iMAGE_INT_KEY, image_int);
-        finish();
+        intent.putExtra(WinnerActivity.WINNER_SCORE_KEY, winnerScore);
         startActivity(intent);
+        finish();
 
     }
 }

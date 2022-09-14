@@ -30,6 +30,13 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/winner_name_lbl"
                 android:textSize="50sp"/>
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/winner_LBL_score"
+                android:textSize="50sp"/>
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"

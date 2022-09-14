@@ -3,6 +3,7 @@ package com.example.wargame;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -14,8 +15,11 @@ public class WinnerActivity extends AppCompatActivity {
     public static int winnerImageInt;
     public static final String WINNER_NAME_KEY = "WINNER_NAME_KEY";
     public static final String WINNER_iMAGE_INT_KEY = "WINNER_iMAGE_INT_KEY";
+    public static final String WINNER_SCORE_KEY = "WINNER_SCORE_KEY";
     public TextView winner_name_lbl;
+    private int winnerScore;
     public ImageView winner_img;
+    public TextView winner_LBL_score;
     Button back_menu_btn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +30,9 @@ public class WinnerActivity extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         if(extras != null){
             winnerName = extras.getString(WINNER_NAME_KEY);
-           winnerImageInt = extras.getInt(WinnerActivity.WINNER_iMAGE_INT_KEY);
+            winnerImageInt = extras.getInt(WINNER_iMAGE_INT_KEY);
+            winnerScore = extras.getInt(WINNER_SCORE_KEY);
+
         }
         initViews();
         setViews();
@@ -38,11 +44,13 @@ public class WinnerActivity extends AppCompatActivity {
     private void setViews(){
         winner_name_lbl.setText(winnerName);
         winner_img.setBackgroundResource(winnerImageInt);
+        winner_LBL_score.setText("Score: " +winnerScore);
     }
     private void initViews() {
         back_menu_btn = findViewById(R.id.back_menu_btn);
         winner_name_lbl = findViewById(R.id.winner_name_lbl);
         winner_img = findViewById(R.id.winner_img);
+        winner_LBL_score = findViewById(R.id.winner_LBL_score);
     }
 
 

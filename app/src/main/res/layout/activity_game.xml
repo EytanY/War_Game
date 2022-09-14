@@ -18,19 +18,404 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20sp"
+                android:orientation="horizontal">
+
+                <View
+                    android:visibility="invisible"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:background="@color/black"
+                    android:layout_weight="1"
+                    android:id="@+id/game_VW_0"/>
+                <View
+                    android:visibility="invisible"
+                    android:id="@+id/game_VW_1"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:background="@color/black"
+                    android:layout_weight="1"/>
+                <View
+                    android:visibility="invisible"
+                    android:layout_width="0dp"
+                    android:id="@+id/game_VW_2"
+                    android:layout_height="10dp"
+                    android:background="@color/black"
+                    android:layout_weight="1"/>
+                <View
+                    android:visibility="invisible"
+                    android:id="@+id/game_VW_3"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:background="@color/black"
+                    android:layout_weight="1"/>
+                <View
+                    android:visibility="invisible"
+                    android:id="@+id/game_VW_4"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:background="@color/black"
+                    android:layout_weight="1"/>
+                <View
+                    android:visibility="invisible"
+                    android:id="@+id/game_VW_5"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:background="@color/black"
+                    android:layout_weight="1"/>
+                <View
+                    android:visibility="invisible"
+                    android:id="@+id/game_VW_6"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:background="@color/black"
+                    android:layout_weight="1"/>
+                <View
+                    android:visibility="invisible"
+                    android:id="@+id/game_VW_7"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:background="@color/black"
+                    android:layout_weight="1"/>
+                <View
+                    android:visibility="invisible"
+                    android:id="@+id/game_VW_8"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:background="@color/black"
+                    android:layout_weight="1"/>
+                <View
+                    android:visibility="invisible"
+                    android:id="@+id/game_VW_9"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:background="@color/black"
+                    android:layout_weight="1"/>
+                <View
+                    android:visibility="invisible"
+                    android:id="@+id/game_VW_10"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:background="@color/black"
+                    android:layout_weight="1"/>
+                <View
+                    android:visibility="invisible"
+                    android:id="@+id/game_VW_11"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:background="@color/black"
+                    android:layout_weight="1"/>
+                <View
+                    android:visibility="invisible"
+                    android:id="@+id/game_VW_12"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:background="@color/black"
+                    android:layout_weight="1"/>
+                <View
+                    android:visibility="invisible"
+                    android:id="@+id/game_VW_13"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:background="@color/black"
+                    android:layout_weight="1"/>
+                <View
+                    android:visibility="invisible"
+                    android:id="@+id/game_VW_14"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:background="@color/black"
+                    android:layout_weight="1"/>
+                <View
+                    android:visibility="invisible"
+                    android:id="@+id/game_VW_15"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:background="@color/black"
+                    android:layout_weight="1"/>
+                <View
+                    android:visibility="invisible"
+                    android:id="@+id/game_VW_16"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:background="@color/black"
+                    android:layout_weight="1"/>
+                <View
+                    android:visibility="invisible"
+                    android:id="@+id/game_VW_17"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:background="@color/black"
+                    android:layout_weight="1"/>
+                <View
+                    android:visibility="invisible"
+                    android:id="@+id/game_VW_18"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:background="@color/black"
+                    android:layout_weight="1"/>
+                <View
+                    android:visibility="invisible"
+                    android:id="@+id/game_VW_19"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:background="@color/black"
+                    android:layout_weight="1"/>
+
+                <View
+                    android:visibility="invisible"
+                    android:id="@+id/game_VW_20"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:background="@color/black"
+                    android:layout_weight="1"/>
+                <View
+                    android:visibility="invisible"
+                    android:id="@+id/game_VW_21"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:background="@color/black"
+                    android:layout_weight="1"/>
+                <View
+                    android:visibility="invisible"
+                    android:id="@+id/game_VW_22"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:background="@color/black"
+                    android:layout_weight="1"/>
+                <View
+                    android:visibility="invisible"
+                    android:id="@+id/game_VW_23"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:background="@color/black"
+                    android:layout_weight="1"/>
+
+                <View
+                    android:visibility="invisible"
+                    android:id="@+id/game_VW_24"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:background="@color/black"
+                    android:layout_weight="1"/>
+
+                <View
+                    android:visibility="invisible"
+                    android:id="@+id/game_VW_25"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:background="@color/black"
+                    android:layout_weight="1"/>
+
+                <View
+                    android:visibility="invisible"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:background="@color/black"
+                    android:layout_weight="1"
+                    android:id="@+id/game_VW_26"/>
+                <View
+                    android:visibility="invisible"
+                    android:id="@+id/game_VW_27"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:background="@color/black"
+                    android:layout_weight="1"/>
+                <View
+                    android:visibility="invisible"
+                    android:layout_width="0dp"
+                    android:id="@+id/game_VW_28"
+                    android:layout_height="10dp"
+                    android:background="@color/black"
+                    android:layout_weight="1"/>
+                <View
+                    android:visibility="invisible"
+                    android:id="@+id/game_VW_29"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:background="@color/black"
+                    android:layout_weight="1"/>
+                <View
+                    android:visibility="invisible"
+                    android:id="@+id/game_VW_30"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:background="@color/black"
+                    android:layout_weight="1"/>
+                <View
+                    android:visibility="invisible"
+                    android:id="@+id/game_VW_31"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:background="@color/black"
+                    android:layout_weight="1"/>
+                <View
+                    android:visibility="invisible"
+                    android:id="@+id/game_VW_32"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:background="@color/black"
+                    android:layout_weight="1"/>
+                <View
+                    android:visibility="invisible"
+                    android:id="@+id/game_VW_33"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:background="@color/black"
+                    android:layout_weight="1"/>
+                <View
+                    android:visibility="invisible"
+                    android:id="@+id/game_VW_34"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:background="@color/black"
+                    android:layout_weight="1"/>
+                <View
+                    android:visibility="invisible"
+                    android:id="@+id/game_VW_35"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:background="@color/black"
+                    android:layout_weight="1"/>
+                <View
+                    android:visibility="invisible"
+                    android:id="@+id/game_VW_36"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:background="@color/black"
+                    android:layout_weight="1"/>
+                <View
+                    android:visibility="invisible"
+                    android:id="@+id/game_VW_37"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:background="@color/black"
+                    android:layout_weight="1"/>
+                <View
+                    android:visibility="invisible"
+                    android:id="@+id/game_VW_38"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:background="@color/black"
+                    android:layout_weight="1"/>
+                <View
+                    android:visibility="invisible"
+                    android:id="@+id/game_VW_39"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:background="@color/black"
+                    android:layout_weight="1"/>
+                <View
+                    android:visibility="invisible"
+                    android:id="@+id/game_VW_40"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:background="@color/black"
+                    android:layout_weight="1"/>
+                <View
+                    android:visibility="invisible"
+                    android:id="@+id/game_VW_41"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:background="@color/black"
+                    android:layout_weight="1"/>
+                <View
+                    android:visibility="invisible"
+                    android:id="@+id/game_VW_42"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:background="@color/black"
+                    android:layout_weight="1"/>
+                <View
+                    android:visibility="invisible"
+                    android:id="@+id/game_VW_43"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:background="@color/black"
+                    android:layout_weight="1"/>
+                <View
+                    android:visibility="invisible"
+                    android:id="@+id/game_VW_44"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:background="@color/black"
+                    android:layout_weight="1"/>
+                <View
+                    android:visibility="invisible"
+                    android:id="@+id/game_VW_45"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:background="@color/black"
+                    android:layout_weight="1"/>
+
+                <View
+                    android:visibility="invisible"
+                    android:id="@+id/game_VW_46"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:background="@color/black"
+                    android:layout_weight="1"/>
+                <View
+                    android:visibility="invisible"
+                    android:id="@+id/game_VW_47"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:background="@color/black"
+                    android:layout_weight="1"/>
+                <View
+                    android:visibility="invisible"
+                    android:id="@+id/game_VW_48"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:background="@color/black"
+                    android:layout_weight="1"/>
+                <View
+                    android:visibility="invisible"
+                    android:id="@+id/game_VW_49"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:background="@color/black"
+                    android:layout_weight="1"/>
+
+                <View
+                    android:visibility="invisible"
+                    android:id="@+id/game_VW_50"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:background="@color/black"
+                    android:layout_weight="1"/>
+
+                <View
+                    android:visibility="invisible"
+                    android:id="@+id/game_VW_51"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:background="@color/black"
+                    android:layout_weight="1"/>
+
+
+
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="50sp"
+                android:layout_marginTop="0dp"
                 android:gravity="center">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    tools:ignore="UseCompoundDrawables">
 
                     <TextView
                         android:id="@+id/white_player_score_lbl"
@@ -39,8 +424,8 @@
                         android:layout_marginStart="60dp"
                         android:text="@string/_0"
                         android:textColor="@color/black"
-                        android:textStyle="bold"
-                        android:textSize="40sp" />
+                        android:textSize="40sp"
+                        android:textStyle="bold" />
 
                     <ImageView
                         android:id="@+id/white_player_img"
@@ -80,13 +465,13 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:textStyle="bold"
                         android:id="@+id/black_player_score_lbl"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/black"
                         android:text="@string/_0"
-                        android:textSize="40sp" />
+                        android:textColor="@color/black"
+                        android:textSize="40sp"
+                        android:textStyle="bold" />
 
                     <ImageView
 
@@ -107,6 +492,12 @@
                 android:backgroundTint="#2B512D"
                 android:text="@string/play"
                 android:textSize="25sp" />
+
+            <View
+                android:layout_width="300dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/black" />
         </LinearLayout>
     </ScrollView>
 
