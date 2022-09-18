@@ -1,13 +1,20 @@
-package com.example.wargame;
+package com.example.wargame.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.wargame.R;
+import com.example.wargame.model.GameManager;
+import com.example.wargame.model.Winner;
+
+import java.util.ArrayList;
 import java.util.Objects;
 
 public class WinnerActivity extends AppCompatActivity {
@@ -20,7 +27,9 @@ public class WinnerActivity extends AppCompatActivity {
     private int winnerScore;
     public ImageView winner_img;
     public TextView winner_LBL_score;
-    Button back_menu_btn;
+    private Button back_menu_btn;
+    private ArrayList<Winner> topTenWinnersList;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,11 +45,29 @@ public class WinnerActivity extends AppCompatActivity {
         }
         initViews();
         setViews();
+        loadTopTenWinnersList();
+        updateTopTenWinnersList();
         back_menu_btn.setOnClickListener(view->{
             finish();
         });
 
     }
+
+    private void loadTopTenWinnersList() {
+        try{
+
+        }catch (Exception exception){
+            topTenWinnersList = new ArrayList<>();
+        }
+    }
+
+
+    private void updateTopTenWinnersList() {
+        SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences(TopTenActivity.TOP_TEN_LIST_KEY, MODE_PRIVATE);
+        @SuppressLint("CommitPrefEdits")
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+    }
+
     private void setViews(){
         winner_name_lbl.setText(winnerName);
         winner_img.setBackgroundResource(winnerImageInt);

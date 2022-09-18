@@ -15,4 +15,5 @@
     <string name="winner">Winner</string>
     <string name="winner_img">winner_img</string>
     <string name="back_menu">חזור לתפריט</string>
+    <string name="top_10_page">Top 10:</string>
 </resources>

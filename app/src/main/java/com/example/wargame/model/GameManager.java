@@ -1,5 +1,10 @@
-package com.example.wargame;
+package com.example.wargame.model;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
 public class GameManager {
@@ -40,5 +45,36 @@ public class GameManager {
             return TIE;
 
     }
+
+    public static ArrayList<Winner> getTopTenList(){
+        return null;
+    }
+
+    public static ArrayList<Winner> addWinnerToTopTenList(Winner winner, ArrayList<Winner> topTenWinners){
+        if(topTenWinners.size() < 10){
+            topTenWinners.add(winner);
+        }
+        else{
+            Winner mWinner = getWinnerWithMinimumScore(topTenWinners);
+            if(winner.getScore() > mWinner.getScore()){
+                topTenWinners.remove(mWinner);
+                topTenWinners.add(winner);
+            }
+        }
+        return topTenWinners;
+    }
+
+    private static Winner getWinnerWithMinimumScore(ArrayList<Winner> topTenWinners) {
+        int min = 57;
+        Winner mWinner = null;
+        for(Winner tWinner : topTenWinners){
+            if(tWinner.getScore() < min){
+                min = tWinner.getScore();
+                mWinner = tWinner;
+            }
+        }
+        return mWinner;
+    }
+
 
 }

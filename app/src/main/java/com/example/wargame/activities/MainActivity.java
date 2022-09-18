@@ -1,10 +1,13 @@
-package com.example.wargame;
+package com.example.wargame.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+
+import com.example.wargame.R;
+import com.example.wargame.activities.GameActivity;
 
 import java.util.Objects;
 
@@ -30,7 +33,8 @@ public class MainActivity extends AppCompatActivity {
      * Open Top Ten Activity
      */
     private void topTenButtonClick() {
-
+        Intent intent = new Intent(this, TopTenActivity.class);
+        startActivity(intent);
     }
 
     /**

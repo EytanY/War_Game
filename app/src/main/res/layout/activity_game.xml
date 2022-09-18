@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GameActivity"
+    tools:context=".activities.GameActivity"
     android:background="@drawable/poker_background_game"
     android:overScrollMode="ifContentScrolls"
     android:gravity="center_horizontal"

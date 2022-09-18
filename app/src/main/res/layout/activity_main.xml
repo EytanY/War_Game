@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".activities.MainActivity"
     android:background="@drawable/poker_background_game"
 
     >
@@ -40,7 +40,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20sp"
-                android:backgroundTint="#2B512D"
+                android:backgroundTint="@color/green_BTN"
                 android:text="@string/start_game"
                 android:textSize="30sp"
                 android:id="@+id/start_game_btn" />

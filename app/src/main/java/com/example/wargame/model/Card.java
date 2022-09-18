@@ -1,4 +1,4 @@
-package com.example.wargame;
+package com.example.wargame.model;
 
 import java.io.Serializable;
 
